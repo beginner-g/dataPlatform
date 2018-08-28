@@ -1,0 +1,270 @@
+@import (reference) "common";
+@import (reference) "role";
+
+.popUpLong{
+	.popUpClose{
+		right: -50px;
+	}
+	.popUpTitle{
+		text-align: center;
+		padding-bottom: 30px;
+		h4{
+			.fw-l;
+			font-size: 20px;
+			color: #b1e6fc;
+			text-align: center;
+			display: inline-block;
+			position: relative;
+			z-index: 1;
+			&:before{
+				content: '';
+				position: absolute;
+				bottom: -15px;
+				left: 50%;
+				width: 311px;
+				margin-left: -155px;
+				height: 21px;
+				z-index: -1;
+				background: url('@{url}popUp-title.png') 0 0 no-repeat;
+				.bgs;
+			}
+		}
+	}
+	.popUpBox{
+		padding: 27px;
+		width: 974px;
+		height: 540px;
+		.popUpCentent{
+			padding-top: 0;
+		}
+	}
+}
+.popUpLongImgs{
+	.label-form{
+		>div{
+			font-size: 18px;
+			label{
+				margin-right: 1.5em;
+				color: #d3f2ff;
+				width: 9em;
+				text-align: right;
+			}
+			span{
+				color: #d3f2ff;
+				text-align: left;
+			}
+		}
+	}
+	.popUpBox{
+		.popUpCentent{
+			.popUpForm{
+				padding-bottom: 0;
+			}
+			.ovy-a .label-form > div{
+				margin-bottom: 7px;
+			}
+		}
+	}
+	.popUpImgForm{
+		.flexjc;
+	}
+	.popUpImg-box{
+		padding-left: 25px;
+		// .flex1;
+		>div{
+			text-align: center;
+			padding: 10px;
+			>div{
+				display: inline-block;
+			}
+		}
+		.img-box{
+			box-sizing: border-box;
+			margin: 10px;
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.popUpImg-rz{
+			margin-bottom: 20px;
+			.img-box{
+				// width: 109px;
+				// height: 134px;
+				width: 127px;
+				height: 148px;
+				background: url('@{url}img-user.png') 0 0 no-repeat;
+				.bgs;
+				padding: 3px 8px 11px 10px;
+				img{
+					clip-path: polygon(0 0, 93px 0, 100% 18px, 100% 100%, 16px 100%, 0  116px, 0% 119px, 0 0);
+				}
+			}
+		}
+		.popUpImg-card{
+			.cardImgs{
+				.df;
+				.img-box{
+					width: 186px;
+					height: 112px;
+					background: url('@{url}img-card.png') 0 0 no-repeat;
+					.bgs;
+					// width: 109px;
+					// height: 134px;
+					padding: 3px 8px 9px 10px;
+					margin-bottom: 20px;
+					img{
+						clip-path: polygon(0 0, 153px 0, 100% 16px, 100% 100%, 15px 100%, 0 87px, 0% 0, 0 0);
+					}
+				}
+			}
+		}
+		p{
+			font-size: 18px;
+			color: #d3f2ff;
+			.fw-l;
+		}
+	}
+}
+
+.popUpLongInputs{
+	.popUpBox{
+		padding: 27px 50px 38px;
+	}
+	.popUpImgForm{
+		.flexjc;
+		.label-form{
+			padding: 0 30px;
+		}
+	}
+	.popUpBtn{
+		&.popUpBtn-zx{
+			position: relative;
+			&:after, &:before{
+				background-color: #33BEF2;
+				height: 1px;
+				content: '';
+				position: absolute;
+				top: 0;
+			}
+			&:after{
+				right: 0;
+				left: 28px;
+			}
+			&:before{
+				left: -5px;
+				width: 33px;
+				transform-origin: right;
+				transform: rotateZ(-35deg);
+			}
+		}
+	}
+	.ant-select-selection-selected-value{
+		padding-left: 1em;
+	}
+}
+
+.popUpsIp{
+	.label-form{
+		>div{
+			font-size: 16px;
+			label{
+				width: 5em;
+				text-align: right;
+				line-height: 38px;
+			}
+		}
+	}
+	.popUpClose{
+		top: -30px;
+		right: -50px;
+	}
+	.popUpBg{
+ 		background-color: rgba(0, 0, 0, 0.4);
+	}
+	.popUpBox{
+		width: 653px;
+		height: 410px;
+		background-color: transparent;
+		padding: 70px 60px 80px;
+		&:before{
+			border-image-source: url('@{url}popUp-ip.png');
+			border-top-width: 150px;
+			border-right-width: 200px;
+			border-bottom-width: 230px;
+			border-left-width: 370px;
+			border-image-slice: 150 200 230 370 fill;
+		}
+		.popUpCentent{
+			padding-top: 40px;
+			.ovy-a .label-form label{
+				font-size: 16px;
+			}
+			.ovy-a .label-form > div{
+				margin-bottom: 40px;
+			}
+			.label-form{
+				>div{
+					&:first-child{
+						.inputBox2{
+							.border-bg;
+							width: 330px;
+							height: 40px;
+							background: none;
+							&:before{
+								border-image-source: url('@{url}select-boxn.png');
+								border-top-width: 40px;
+								border-right-width: 20px;
+								border-bottom-width: 0px;
+								border-left-width: 40px;
+								border-image-slice: 40 40 0 20 fill;
+							}
+							&:focus-within{
+								background: none;
+								&:before{
+									border-image-source: url('@{url}select-boxn.png');
+								}
+							}
+						}
+					}
+					&:last-child{
+						.inputBox2{
+							background: url('@{url}input-boxst.png') 0 0 no-repeat;
+							.bga;
+							&:focus-within{
+								background: url('@{url}input-boxst.png') 0 0 no-repeat;
+								.bga;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.popUpBtn{
+		button{
+			width: 120px;
+		}
+	}
+	.inputBox2{
+		div{
+			height: 100%;
+		}
+		.ant-input-number{
+			width: 100%;
+			border: none;
+			background: transparent;
+		}
+		.ant-input-number-handler-wrap{
+			display: none;
+		}
+
+	}
+}
+
+.label-w300{
+	.checkBox .ant-checkbox-wrapper{
+		width: auto;
+	}
+}

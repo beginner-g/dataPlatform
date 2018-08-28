@@ -1,0 +1,279 @@
+@import (reference) "common";
+.layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: url('@{url}/public-bg.png');
+    background-size: 100% 100%;
+    .layout-header {
+        background: none;
+        padding: 0;
+        width: 100%;
+        .flexdc;
+        position: relative;
+        height: auto;
+        line-height: inherit;
+        .layout-title {
+            background: url('@{url}/header-bg.png');
+            background-size: 100% 100%;
+            width: 100%;
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: url('@{url}/meun-bg.png');
+                background-size: 100% 100%;
+                width: 232px;
+                height: 193px;
+            }
+            h2 {
+                text-align: center;
+                font-size: 1.75rem;
+                padding: 1rem 0;
+                box-sizing: border-box;
+                font-weight: 600;
+                font-family: '微软雅黑';
+                background: linear-gradient( #fff, #a5d6fa);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .layout-nav {
+            display: flex;
+            width: 757px;
+            margin: 18px auto;
+            height: 62px;
+            position: relative;
+            z-index: 1;
+            .layout-nav-box {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+                align-items: center;
+                .nav-option, .nav-option-active{
+                    box-sizing: border-box;
+                    padding: 0 17px;
+                    height: 62px;
+                    line-height: 62px;
+                    text-align: center;
+                    display: block;
+                    z-index: 100;
+                    text-decoration: none;
+                }
+                .nav-option {
+                    background: url('@{url}/menu-box.png');
+                    background-size: 100% 100%;
+                }
+                .nav-option:hover, .nav-option-active {
+                    background: url('@{url}/menu-cur.png');
+                    background-size: 100% 100%;
+                    color: #34c4ff;
+                }
+                .slick-track {
+                    display: flex;
+                    align-items: center;
+                }
+                .slick-slide {
+                    width: 156px !important;
+                    padding: 0 17px;
+                    height: 62px;
+                    box-sizing: content-box;
+                    >div{
+                        width: 100%;
+                        height: 100%;
+                        font-size: 0;
+                        a{
+                            font-size: 16.77px;
+                            display: block;
+                            .ov1;
+                        }
+                    }
+                }
+                .slick-prev:before {
+                    background: url('@{url}/Arrow-left.png');
+                    background-size: 100% 100%;
+                }
+                .slick-next:before {
+                    background: url('@{url}/Arrow-right.png');
+                    background-size: 100% 100%;
+                }
+                .slick-prev {
+                    left: -2rem;
+                }
+                .slick-next {
+                    right: -2rem;
+                }
+                .slick-prev, .slick-next {
+                    width: 1.3125rem;
+                    height: 2.6875rem;
+                    &:before{
+                        color: transparent;
+                        font-size: 36px;
+                        opacity: 1;
+                        .poa100;
+                    }
+                }
+            }
+        }
+        .layout-side-nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            z-index: 1;
+            height: 12.0625rem;
+            .side-setting, .side-username, .side-exit {
+                position: absolute;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                span {
+                    color: #34c4ff;
+                    font-size: 12.24px;
+                    opacity: 0.7;
+                    box-sizing: border-box;
+                    white-space: nowrap;
+                }
+                &:hover, &.side-cur{
+                    span{
+                        color: #34c4ff;
+                        font-size: 15.5px;
+                        opacity: 1;
+                    }
+                }
+                i{
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            .side-setting {
+                top: 4px;
+                right: 128px;
+                .side-setBox{
+                    display: none;
+                    position: absolute;
+                    right: 42px;
+                    top: 2px;
+                    animation-duration: .3s;
+                    animation-fill-mode: both;
+                    animation-name: layui-upbit;
+                    background: url('@{url}user-cur.png') 0 0 no-repeat;
+                    .bgs;
+                    padding: .5rem .8125rem; // 13px;
+                    box-sizing: border-box;
+                    width: 10.5rem; // 168px
+                    height: 5.1875rem; // 83px
+                    ul{
+                        width: 5.75rem; // 92px
+                        li{
+                            color: #34c4ff;
+                            text-align: center;
+                            font-size: 1.125rem; // 18px
+                            line-height: 1.9;
+                            opacity: .52;
+                            &:not(:last-child){
+                                border-bottom: 2px solid #174D74;
+                            }
+                            &:hover, &.setBox-cur{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                i{
+                    background: url('@{url}headBtn-comp.png') 0 0 no-repeat;
+                    .bga;
+                }
+                &:hover{
+                    .side-setBox{
+                        display: block;
+                    }
+                }
+                &:hover, &.side-cur{
+                    i{
+                        background: url('@{url}headBtn-compl.png') 0 0 no-repeat;
+                        .bga;
+                    }
+                }
+            }
+            .side-username {
+                i{
+                    background: url('@{url}headBtn-user.png') 0 0 no-repeat;
+                    .bga;
+                }
+                top: 50px;
+                right: 83px;
+                &:hover, &.side-cur{
+                    i{
+                        background: url('@{url}headBtn-userl.png') 0 0 no-repeat;
+                        .bga;
+                    }
+                }
+            }
+            .side-exit {
+                i{
+                    background: url('@{url}headBtn-out.png') 0 0 no-repeat;
+                    .bga;
+                }
+                top: 78px;
+                right: 25px;
+            }
+            &.layout-side-nav2{
+                .side-username {
+                    top: 18px;
+                    right: 110px;
+                }
+                .side-exit {
+                    top: 65px;
+                    right: 48px;
+                }
+            }
+        }
+    }
+}
+
+.ant-dropdown-menu {
+    background: url('@{url}/dailog.png');
+    background-size: 100% 100%;
+}
+
+.ant-dropdown-menu-item>a, .ant-dropdown-menu-submenu-title>a {
+    color: #ceeefb !important;
+    text-align: center;
+    padding: 1.125rem 1.125rem;
+}
+
+.ant-dropdown-menu-item:hover {
+    background: none;
+}
+
+.ant-dropdown-menu-item> a{
+    &:hover, &.menu-acur {
+        color: #20d1fb !important;
+        box-sizing: border-box;
+    }
+}
+
+@-webkit-keyframes layui-upbit {
+    from {
+        -webkit-transform: translate3d(0, 30px, 0);
+        opacity: .3
+    }
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@keyframes layui-upbit {
+    from {
+        transform: translate3d(0, 30px, 0);
+        opacity: .3
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}

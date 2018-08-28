@@ -1,0 +1,292 @@
+.layout {
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  background: url('../assets/img//public-bg.png');
+  background-size: 100% 100%;
+}
+.layout .layout-header {
+  background: none;
+  padding: 0;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative;
+  height: auto;
+  line-height: inherit;
+}
+.layout .layout-header .layout-title {
+  background: url('../assets/img//header-bg.png');
+  background-size: 100% 100%;
+  width: 100%;
+}
+.layout .layout-header .layout-title:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url('../assets/img//meun-bg.png');
+  background-size: 100% 100%;
+  width: 232px;
+  height: 193px;
+}
+.layout .layout-header .layout-title h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-family: '微软雅黑';
+  background: linear-gradient(#fff, #a5d6fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.layout .layout-header .layout-nav {
+  display: -ms-flexbox;
+  display: flex;
+  width: 757px;
+  margin: 18px auto;
+  height: 62px;
+  position: relative;
+  z-index: 1;
+}
+.layout .layout-header .layout-nav .layout-nav-box {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.layout .layout-header .layout-nav .layout-nav-box .nav-option,
+.layout .layout-header .layout-nav .layout-nav-box .nav-option-active {
+  box-sizing: border-box;
+  padding: 0 17px;
+  height: 62px;
+  line-height: 62px;
+  text-align: center;
+  display: block;
+  z-index: 100;
+  text-decoration: none;
+}
+.layout .layout-header .layout-nav .layout-nav-box .nav-option {
+  background: url('../assets/img//menu-box.png');
+  background-size: 100% 100%;
+}
+.layout .layout-header .layout-nav .layout-nav-box .nav-option:hover,
+.layout .layout-header .layout-nav .layout-nav-box .nav-option-active {
+  background: url('../assets/img//menu-cur.png');
+  background-size: 100% 100%;
+  color: #34c4ff;
+}
+.layout .layout-header .layout-nav .layout-nav-box .slick-track {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.layout .layout-header .layout-nav .layout-nav-box .slick-slide {
+  width: 156px !important;
+  padding: 0 17px;
+  height: 62px;
+  box-sizing: content-box;
+}
+.layout .layout-header .layout-nav .layout-nav-box .slick-slide > div {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+}
+.layout .layout-header .layout-nav .layout-nav-box .slick-slide > div a {
+  font-size: 16.77px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.layout .layout-header .layout-nav .layout-nav-box .slick-prev:before {
+  background: url('../assets/img//Arrow-left.png');
+  background-size: 100% 100%;
+}
+.layout .layout-header .layout-nav .layout-nav-box .slick-next:before {
+  background: url('../assets/img//Arrow-right.png');
+  background-size: 100% 100%;
+}
+.layout .layout-header .layout-nav .layout-nav-box .slick-prev {
+  left: -2rem;
+}
+.layout .layout-header .layout-nav .layout-nav-box .slick-next {
+  right: -2rem;
+}
+.layout .layout-header .layout-nav .layout-nav-box .slick-prev,
+.layout .layout-header .layout-nav .layout-nav-box .slick-next {
+  width: 1.3125rem;
+  height: 2.6875rem;
+}
+.layout .layout-header .layout-nav .layout-nav-box .slick-prev:before,
+.layout .layout-header .layout-nav .layout-nav-box .slick-next:before {
+  color: transparent;
+  font-size: 36px;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.layout .layout-header .layout-side-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  z-index: 1;
+  height: 12.0625rem;
+}
+.layout .layout-header .layout-side-nav .side-setting,
+.layout .layout-header .layout-side-nav .side-username,
+.layout .layout-header .layout-side-nav .side-exit {
+  position: absolute;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.layout .layout-header .layout-side-nav .side-setting span,
+.layout .layout-header .layout-side-nav .side-username span,
+.layout .layout-header .layout-side-nav .side-exit span {
+  color: #34c4ff;
+  font-size: 12.24px;
+  opacity: 0.7;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.layout .layout-header .layout-side-nav .side-setting.headrm-cur span,
+.layout .layout-header .layout-side-nav .side-username.headrm-cur span,
+.layout .layout-header .layout-side-nav .side-exit.headrm-cur span {
+  color: #34c4ff;
+  font-size: 15.5px;
+  opacity: 1;
+}
+.layout .layout-header .layout-side-nav .side-setting i,
+.layout .layout-header .layout-side-nav .side-username i,
+.layout .layout-header .layout-side-nav .side-exit i {
+  width: 40px;
+  height: 40px;
+}
+.layout .layout-header .layout-side-nav .side-setting {
+  top: 4px;
+  right: 128px;
+}
+.layout .layout-header .layout-side-nav .side-setting .side-setBox {
+  display: none;
+  position: absolute;
+  right: 42px;
+  top: 2px;
+  animation-duration: .3s;
+  animation-fill-mode: both;
+  animation-name: layui-upbit;
+  background: url('../assets/img/user-cur.png') 0 0 no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: .5rem .8125rem;
+  box-sizing: border-box;
+  width: 10.5rem;
+  height: 5.1875rem;
+}
+.layout .layout-header .layout-side-nav .side-setting .side-setBox ul {
+  width: 5.75rem;
+}
+.layout .layout-header .layout-side-nav .side-setting .side-setBox ul li {
+  color: #34c4ff;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.9;
+  opacity: .52;
+}
+.layout .layout-header .layout-side-nav .side-setting .side-setBox ul li:not(:last-child) {
+  border-bottom: 2px solid #174D74;
+}
+.layout .layout-header .layout-side-nav .side-setting .side-setBox ul li:hover,
+.layout .layout-header .layout-side-nav .side-setting .side-setBox ul li.setBox-cur {
+  opacity: 1;
+}
+.layout .layout-header .layout-side-nav .side-setting i {
+  background: url('../assets/img/headBtn-comp.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.layout .layout-header .layout-side-nav .side-setting:hover .side-setBox,
+.layout .layout-header .layout-side-nav .side-setting.side-cur .side-setBox {
+  display: block;
+}
+.layout .layout-header .layout-side-nav .side-setting:hover i,
+.layout .layout-header .layout-side-nav .side-setting.side-cur i {
+  background: url('../assets/img/headBtn-compl.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.layout .layout-header .layout-side-nav .side-username {
+  top: 50px;
+  right: 83px;
+}
+.layout .layout-header .layout-side-nav .side-username i {
+  background: url('../assets/img/headBtn-user.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.layout .layout-header .layout-side-nav .side-username:hover i,
+.layout .layout-header .layout-side-nav .side-username.side-cur i {
+  background: url('../assets/img/headBtn-userl.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.layout .layout-header .layout-side-nav .side-exit {
+  top: 78px;
+  right: 25px;
+}
+.layout .layout-header .layout-side-nav .side-exit i {
+  background: url('../assets/img/headBtn-out.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+.layout .layout-header .layout-side-nav.layout-side-nav2 .side-username {
+  top: 18px;
+  right: 110px;
+}
+.layout .layout-header .layout-side-nav.layout-side-nav2 .side-exit {
+  top: 65px;
+  right: 48px;
+}
+.ant-dropdown-menu {
+  background: url('../assets/img//dailog.png');
+  background-size: 100% 100%;
+}
+.ant-dropdown-menu-item > a,
+.ant-dropdown-menu-submenu-title > a {
+  color: #ceeefb !important;
+  text-align: center;
+  padding: 1.125rem 1.125rem;
+}
+.ant-dropdown-menu-item:hover {
+  background: none;
+}
+.ant-dropdown-menu-item > a:hover {
+  color: #20d1fb !important;
+  box-sizing: border-box;
+}
+@keyframes layui-upbit {
+  from {
+    transform: translate3d(0, 30px, 0);
+    opacity: 0.3;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

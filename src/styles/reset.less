@@ -1,0 +1,131 @@
+@import (reference) "common";
+/* 初始化 */
+    html,body,header,footer,nav,header,footer,div,ul,li,img,a,span,em,form,p,i,label,input,button,textarea,h1,h2,h3,h4,h5{
+        margin: 0;
+        border: 0;
+        padding:0;
+        font-style:normal;
+    }
+    html{
+        font-size: 16px;
+    }
+    html,body {
+        height: 100%;
+        min-height: 100%;
+        background-color: #FFF;
+        font-family: Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    }
+    nav,header,footer{
+        display: block;
+        position:relative;
+    }
+    img,a,button,em,label,textarea,span,i{
+        display:inline-block;
+    }
+    img{
+        // width: 100%;
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        cursor: pointer;
+        &:visited{
+            text-decoration: none;
+        }
+        &:active, &:hover{
+            outline: 0;
+        }
+    }
+    label{
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    input,button,textarea {
+        border: 0;
+        font-size: 1em;
+        line-height: 1em;
+        font-family: sans-serif;
+        text-decoration: none;
+        -webkit-appearance: none;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    input::-ms-clear{display: none;}
+    input::-ms-reveal{display:none;}
+    input:-webkit-autofill {
+        // -webkit-box-shadow: 0 0 0px 1000px white inset;
+        -webkit-text-fill-color: #fff !important;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+    button{
+        outline: none;
+        cursor: pointer;
+    }
+    table{
+        width: 100%;
+    }
+
+ /* 进度条 */
+    ::-webkit-scrollbar { display:none }
+    body{
+        scrollbar-face-color:#C0C5CC; /*面子*/
+        scrollbar-arrow-color:#f9f9f9; /*箭头*/
+        scrollbar-3dlight-color:#D8D9DE; /*最外左*/
+        scrollbar-highlight-color:#D8D9DE; /*左二*/
+        scrollbar-shadow-color:#D8D9DE; /*右二*/
+        scrollbar-darkshadow-color:#D8D9DE; /*右一*/
+        scrollbar-track-color:#D8D9DE; /*滑道*/
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+        &::-webkit-scrollbar { display: block }
+    }
+    /* 滚动条整体 */
+    ::-webkit-scrollbar{
+        width: 6px; /*滚动条宽度*/
+        height: 6px;
+    }
+    ::-webkit-scrollbar-button{
+        display: none;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: transparent;
+    }
+    ::-webkit-scrollbar-track-piece{ /*滑道*/
+        background: linear-gradient(to right , #D8D9DE ,#E6E8EC 100%);
+        background: -o-linear-gradient(to right , #D8D9DE ,#E6E8EC 100%);
+        background: -ms-linear-gradient(to right , #D8D9DE ,#E6E8EC 100%);
+        background: -moz-linear-gradient(to right , #D8D9DE ,#E6E8EC 100%);
+        background: -webkit-linear-gradient(to right , #D8D9DE ,#E6E8EC 100%);
+        border-radius: 9px; /*滑道圆角宽度*/
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color:#93C7F5; /*滑动条表面*/
+        border-radius: 9px;  /*滑动条圆角宽度*/
+    }
+    ::-webkit-scrollbar-corner { /*横竖滚动条交角*/
+        background-color: transparent;
+    }
+
+/* 结构 */
+    body{
+        overflow: hidden;
+        position: relative;
+    }
+
+/* 适配 */
+    @media only screen and (max-width: 1600px) {
+        html {
+            font-size: 17px !important;
+        }
+    }
+    @media only screen and (max-width: 1400px) {
+        html {
+            font-size: 16px !important;
+        }
+    }
+    @media only screen and (max-width: 1200px) {
+        html {
+            font-size: 15px !important;
+        }
+    }

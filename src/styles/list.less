@@ -1,0 +1,114 @@
+@import (reference) "common";
+@import (reference) "role";
+
+.tableList-control{
+	.flex1;
+	.flexdc;
+	padding: 0 18px 0 43px;
+	box-shadow: border-box;
+	.tablelist-tr{
+		.flexac;
+		div{
+			.flex1;
+			text-align: center;
+			span{
+				color: #34c4ff;
+				font-size: 1.125rem; // 18px;
+				.fw-l;
+				line-height: 50px;
+				width: 100%;
+				.ov1;
+				.dib;
+			}
+		}
+	}
+	>.tablelist-tr{
+		padding-right: 25px;
+	}
+	.tablelist-box{
+		position: relative;
+		padding-right: 25px;
+		.flex1;
+		.df;
+		.tableList-cell{
+			margin-bottom: 15px;
+		}
+		.tablelist-tr{
+			.border-bg;
+			height: 61px;
+			&:before{
+				border-image-source: url('@{url}table-list.png');
+				border-top-width: 61px;
+				border-right-width: 50px;
+				border-bottom-width: 0px;
+				border-left-width: 150px;
+				border-image-slice: 61 50 0 150 fill;
+			}
+			div{
+				.ov1;
+				span{
+					line-height: 61px;
+					color: #b1e7fd;
+					font-size: 1rem; // 16px;
+				}
+			}
+		}
+	}
+	.tablelist-btns{
+		text-align: right;
+		button{
+			width: 102px;
+			height: 34px;
+			line-height: 34px;
+			.border-bg;
+			font-size: 14px;
+			color: #fff;
+			margin-left: .9375rem; // 15px;
+			text-align: center;
+			&:hover{
+				opacity: .88;
+			}
+			&:active{
+				opacity: 1;
+			}
+			&:before{
+				border-top-width: 34px;
+				border-right-width: 24px;
+				border-bottom-width: 0px;
+				border-left-width: 24px;
+				border-image-slice: 34 24 0 24 fill;
+			}
+			&.tableBtn-red{
+				color: #fbdade;
+				&:before{
+					border-image-source: url('@{url}btn-red.png');
+				}
+			}
+			&.tableBtn-blue{
+				color: #6dd5ff;
+				&:before{
+					border-image-source: url('@{url}btn-blue.png');
+				}
+			}
+			&.tableBtn-orange{
+				&:before{
+					border-image-source: url('@{url}btn-orange.png');
+				}
+			}
+			&.tableBtn-green{
+				color: #a9f9d4;
+				&:before{
+					border-image-source: url('@{url}btn-green.png');
+				}
+			}
+		}
+	}
+}
+
+.demo-loading-container{
+	position: fixed;
+	z-index: 2;
+	bottom: 100px;
+	left: 50%;
+	margin-left: -10px;
+}
